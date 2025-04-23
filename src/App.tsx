@@ -12,7 +12,7 @@ import NFTMarket from "./NFTMarket";
 const App = () => {
   const [isDarkMode, setIsDarkMode] = useState(() => {
     const savedMode = localStorage.getItem("darkMode");
-    return savedMode !== null ? JSON.parse(savedMode) : true;
+    return savedMode !== null ? JSON.parse(savedMode) : false;
   });
   const { address, isConnected } = useAccount();
 
