@@ -1,9 +1,5 @@
 import { useEffect, useState } from "react";
-import {
-  useAccount,
-  useWriteContract,
-  useWaitForTransactionReceipt,
-} from "wagmi";
+import { useWriteContract, useWaitForTransactionReceipt } from "wagmi";
 import { waitForTransactionReceipt } from "@wagmi/core";
 import { config } from "../wagmi";
 import { NFT_MARKET_ADDRESS } from "../assets/config";
