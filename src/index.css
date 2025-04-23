@@ -1,0 +1,51 @@
+@import "tailwindcss";
+@import "@fontsource/josefin-sans/300.css";
+@import "@fontsource/josefin-sans/400.css";
+@import "@fontsource/josefin-sans/500.css";
+@import "@fontsource/josefin-sans/700.css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+:root {
+  background-color: #181818;
+  color: #181818;
+  color-scheme: light dark;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-synthesis: none;
+  font-weight: 400;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    background-color: #f8f8f8;
+    color: #181818;
+  }
+}
+
+@theme {
+  --font-display: "Josefin Sans";
+}
